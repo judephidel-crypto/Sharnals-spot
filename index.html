@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore nail services and inspiration from Sharnails-spot.">
+    <title>Sharnails-spot | Nail Care &amp; Inspiration</title>
+    <style>
+        :root {
+            color-scheme: light;
+            --pink: #c2185b;
+            --light-pink: #fff0f6;
+            --ink: #34232b;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--ink);
+            background: #fff8fb;
+            line-height: 1.6;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            padding: 12px 6%;
+            background-color: var(--pink);
+            box-shadow: 0 2px 10px rgba(52, 35, 43, 0.18);
+        }
+
+        nav h1 {
+            margin: 0;
+            color: white;
+            font-size: 1.35rem;
+            white-space: nowrap;
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px 18px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        nav a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        nav a:hover,
+        nav a:focus-visible {
+            color: #ffe082;
+            text-decoration: underline;
+        }
+
+        main {
+            width: min(1050px, 92%);
+            margin: 28px auto;
+        }
+
+        section {
+            scroll-margin-top: 90px;
+            margin: 24px 0;
+            padding: clamp(22px, 5vw, 44px);
+            border-radius: 16px;
+            background-color: rgba(255, 255, 255, 0.94);
+            box-shadow: 0 5px 20px rgba(80, 35, 55, 0.1);
+        }
+
+        h2 {
+            margin-top: 0;
+            color: var(--pink);
+        }
+
+        .hero {
+            min-height: 300px;
+            display: grid;
+            align-content: center;
+            color: white;
+            background:
+                linear-gradient(90deg, rgba(55, 20, 38, 0.72), rgba(55, 20, 38, 0.12)),
+                url("images/images.jpg") center 45% / cover;
+        }
+
+        .hero h2 {
+            max-width: 600px;
+            margin-bottom: 8px;
+            color: white;
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            line-height: 1.15;
+        }
+
+        .hero p {
+            max-width: 520px;
+            margin: 0;
+            font-size: 1.1rem;
+        }
+
+        .services-table {
+            width: 100%;
+            border-collapse: collapse;
+            overflow: hidden;
+            border-radius: 10px;
+            background-color: white;
+        }
+
+        th,
+        td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid #f1dce5;
+        }
+
+        th {
+            color: white;
+            background-color: var(--pink);
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: var(--light-pink);
+        }
+
+        tbody tr:hover {
+            background-color: #ffe0ed;
+        }
+
+        .gallery-image {
+            display: grid;
+            width: 100%;
+            gap: 15px;
+            max-height: 250px;
+            object-fit: cover;
+            border-radius: 19px;
+            box-shadow: 0 4px 14px rgba(52, 35, 43, 0.16);
+        }
+
+        .note {
+            padding: 16px;
+            border-left: 4px solid var(--pink);
+            border-radius: 6px;
+            background-color: var(--light-pink);
+        }
+
+        .testimonials {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            width: 100%;
+            background-color: var(--light-pink);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 14px rgba(52, 35, 43, 0.16);
+        }
+
+        footer {
+            padding: 20px;
+            color: white;
+            background-color: #51243a;
+            text-align: center;
+        }
+
+        @media (max-width: 700px) {
+            nav {
+                position: static;
+                flex-direction: column;
+            }
+
+            nav ul {
+                gap: 8px 14px;
+            }
+
+            main {
+                width: min(100% - 24px, 1050px);
+                margin: 12px auto;
+            }
+
+            section {
+                margin: 14px 0;
+                padding: 22px;
+            }
+
+            .hero {
+                min-height: 260px;
+            }
+        }
+
+        @media (max-width: 420px) {
+
+            th,
+            td {
+                padding: 9px 8px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav aria-label="Main navigation">
+        <h1>Sharnails-spot</h1>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <h2>Welcome to Sharnails-spot</h2>
+            <p>Your one-stop spot for nail care, beautiful designs, and inspiration.</p>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Welcome to Sharnails-spot. We are here to help you find nail care and styles that make you feel your
+                best.</p>
+        </section>
+
+        <section id="services">
+            <h2>Our Services and Products</h2>
+            <table class="services-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Service</th>
+                        <th scope="col">Product</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Nail art</td>
+                        <td>Gel</td>
+                        <td>KSh 500</td>
+                    </tr>
+                    <tr>
+                        <td>Pedicure</td>
+                        <td>Scrubber</td>
+                        <td>KSh 300</td>
+                    </tr>
+                    <tr>
+                        <td>Manicure</td>
+                        <td>File</td>
+                        <td>KSh 200</td>
+                    </tr>
+                    <tr>
+                        <td>Acrylic Nails</td>
+                        <td>Acrylic Powder</td>
+                        <td>KSh 400</td>
+                    </tr>
+                    <tr>
+                        <td>Polish Change</td>
+                        <td>Nail Polish</td>
+                        <td>KSh 150</td>
+                    </tr>
+                    <tr>
+                        <td>French Tips</td>
+                        <td>Tip Guides</td>
+                        <td>KSh 350</td>
+                    </tr>
+                    <tr>
+                        <td>Gel Extensions</td>
+                        <td>Gel Builder</td>
+                        <td>KSh 600</td>
+                    </tr>
+                    <tr>
+                        <td>Cuticle Care</td>
+                        <td>Cuticle Oil</td>
+                        <td>KSh 100</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="gallery">
+            <h2>Nail Inspiration</h2>
+            <p>hover over the inspos and find what pleases your eyes and which suits your styles.</p>
+            <div class="gallery">
+                <img class="gallery-image" src="images/images.jpg"
+                    alt="Long pink nail art with delicate white designs and floral details">
+                <img class="gallery-image" src="images/inspo2.jpg"
+                    alt="Elegant black and gold nail art with geometric patterns">
+                <img class="gallery-image" src="images/inspo3.jpg" alt="Vibrant red nail art with glittering accents">
+                <img class="gallery-image" src="images/inspo4.webp" alt="Minimalist white nail art with subtle details">
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <h2>Testimonials</h2>
+            <p class="note">Here are what our customers say about us.</p>
+            <div class="Testimonials">
+                <h3>Linda Otete</h3>
+                <p>⭐⭐⭐⭐⭐</p>
+                <p>I love my nails! Thanks for the amazing service!</p>
+                <h3>Faith Otete</h3>
+                <p>⭐⭐⭐⭐</p>
+                <p>The technicians are skilled and the atmosphere is relaxing!</p>
+                <h3>Pauline Otete</h3>
+                <p>⭐⭐⭐</p>
+                <p>Good service and friendly staff. Will definitely come back!</p>
+            </div>
+        </section>
+        </section>
+
+        <section id="contacts">
+            <h2>Contact Us</h2>
+            <p>Ready to ask a question or book a visit? contact us via:0796244767, shalynsydney@gmail.com, or visit<a
+                    href="@Sharnail-spot" target="_blank"> our social media</a> accounts so customers can reach you.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sharnails-spot</p>
+    </footer>
+</body>
+
+</html>
